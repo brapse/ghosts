@@ -1,0 +1,4 @@
+bin/*
+build/*
+openFrameworks-Info.plist
+openFrameworks.xcodeproj
