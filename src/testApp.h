@@ -8,6 +8,10 @@
 #define _USE_LIVE_VIDEO		// uncomment this to use a live camera
 								// otherwise, we'll use a movie file
 
+typedef struct{
+    float centerX;
+    float centerY;
+} blob;
 
 class testApp : public ofBaseApp{
 
@@ -40,6 +44,8 @@ class testApp : public ofBaseApp{
 
 		int 				threshold;
 		bool				bLearnBakground;
+		
+		blob				blobs[10];
 
 
 };
