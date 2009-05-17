@@ -57,14 +57,15 @@ void testApp::update(){
 		// find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
 		// also, find holes is set to true so we will get interior contours as well....
 		contourFinder.findContours(grayDiff, 20, (340*240)/3, 10, true);	// find holes
-		
+
 		for (int i = 0; i < contourFinder.nBlobs; i++){
             blobs[i].centerX = (contourFinder.blobs[i].boundingRect.width / 2) + contourFinder.blobs[i].boundingRect.x;
             blobs[i].centerY = (contourFinder.blobs[i].boundingRect.height / 2) + contourFinder.blobs[i].boundingRect.y;
         }
 	}
 
-	printf("%f \n", ofGetFrameRate());
+	//printf("the frame rate is: %f, and it may be high or low \n", ofGetFrameRate());
+	for(int i = 0; i < contourFinder.nBlobs; i++) cout << "center of blob " << i << "is X: " << blobs[i].centerX << "and Y: " << blobs[i].centerY << endl;
 }
 
 //--------------------------------------------------------------
