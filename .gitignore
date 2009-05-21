@@ -4,5 +4,5 @@ openFrameworks-Info.plist
 openFrameworks.xcodeproj
 Makefile
 cb_build_runner.sh
-ghosts.cpb
+ghosts.cbp
 ghosts.layout
